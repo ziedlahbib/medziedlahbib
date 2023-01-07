@@ -26,11 +26,8 @@ BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);}
 @Override
 protected void configure(HttpSecurity http) throws Exception {
-	/*
-	http.httpBasic().disable();
 	
-
-
+	
 http.authorizeRequests() .antMatchers("/registration","/login").permitAll()
 
 //.antMatchers("/Assurance/get-assurance").access("hasRole('SUPERADMIN')")
@@ -40,8 +37,8 @@ http.authorizeRequests() .antMatchers("/registration","/login").permitAll()
 .authenticated()
 .and()
 .httpBasic().and().csrf().disable();
-*/
 
+/*
 		AuthenticationEntryPoint entryPoint = new CustomAuthenticationEntryPoint();
 		http.authorizeRequests() .antMatchers("/registration","/login").permitAll()
 
@@ -53,7 +50,7 @@ http.authorizeRequests() .antMatchers("/registration","/login").permitAll()
 		.and()
 		.httpBasic().authenticationEntryPoint(entryPoint).and().csrf().disable();
 		
-
+*/
 
 
 

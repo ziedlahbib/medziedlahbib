@@ -50,13 +50,8 @@ public class User implements Serializable {
 	private Boolean active;
 
 	
-
-	@ManyToMany(cascade = CascadeType.PERSIST, fetch
-	= FetchType.EAGER)
-@JsonIgnore
-	private Set<Role> roles;
 	
-	private String role;
+	private Role role;
 
 
 
